@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="@color/black_transparant"
+    android:backgroundTintMode="src_atop"
+    tools:context=".AddActivity">
+
+    <!--    Banner atau Header-->
+    <LinearLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/banner_corner"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--        EVOS image setting-->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="5sp"
+            android:src="@drawable/evos" />
+
+        <!--        Header teks-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="EVOS FAMS CUP"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="80px"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--    Scroll vertikal-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner">
+
+        <!--        Pengaturan Background Form Input-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/main_content_corners">
+
+            <!--            Label input nama-->
+            <TextView
+                android:id="@+id/lbl_namalengkap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="monospace"
+                android:labelFor="@+id/input_namalengkap"
+                android:text="Nama Lengkap"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!--            Inputan nama lengkap-->
+            <EditText
+                android:id="@+id/input_namalengkap"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_namalengkap"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/light_blue"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!--            Label nickname-->
+            <TextView
+                android:id="@+id/lbl_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_namalengkap"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="monospace"
+                android:labelFor="@+id/input_nickname"
+                android:text="Nickname"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!--            Inputan nickname-->
+            <EditText
+                android:id="@+id/input_nickname"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_nickname"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/light_blue"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!--            Label email-->
+            <TextView
+                android:id="@+id/lbl_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_nickname"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="monospace"
+                android:labelFor="@+id/input_email"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!--            Inputan email-->
+            <EditText
+                android:id="@+id/input_email"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_email"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/light_blue"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!--            Label domisili-->
+            <TextView
+                android:id="@+id/lbl_domisili"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_email"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="monospace"
+                android:labelFor="@+id/input_domisili"
+                android:text="Domisili"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!--            Inputan domisili-->
+            <EditText
+                android:id="@+id/input_domisili"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_domisili"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/light_blue"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!--            Label turnamen-->
+            <TextView
+                android:id="@+id/lbl_turnamen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_domisili"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="monospace"
+                android:labelFor="@+id/grup_turnamen"
+                android:text="Tournament yang diikuti ?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--            Scroll layar Horizontal-->
+            <HorizontalScrollView
+                android:id="@+id/horizontal_scroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_turnamen">
+
+                <!--                Grid game-->
+                <GridLayout
+                    android:id="@+id/grup_turnamen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lbl_turnamen"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <!--                    Grup untuk radio button agar bisa dipilih cuman salah satu-->
+                    <RadioGroup
+                        android:id="@+id/rgturnamen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--                        Radio button mlbb-->
+                        <RadioButton
+                            android:id="@+id/mlbb"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="5dp" />
+
+                        <!--                        Icon mlbb-->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/mlbb" />
+
+                        <!--                        Radio button lolwr-->
+                        <RadioButton
+                            android:id="@+id/lolwr"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="5dp" />
+
+                        <!--                        Icon lolwr-->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@color/black"
+                            android:src="@drawable/lolwr" />
+
+                        <!--                        Radio button ff-->
+                        <RadioButton
+                            android:id="@+id/freefire"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="5dp" />
+
+                        <!--                        Icon ff-->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/freefire" />
+
+                        <!--                        Radio button pubgm-->
+                        <RadioButton
+                            android:id="@+id/pubgm"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="5dp" />
+
+                        <!--                        Icon pubgm-->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/pubgm" />
+
+                        <!--                        Radio button codm-->
+                        <RadioButton
+                            android:id="@+id/codm"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="5dp" />
+
+                        <!--                        Icon codm-->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/codm" />
+
+                        <!--                        Radio button valo-->
+                        <RadioButton
+                            android:id="@+id/valo"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="5dp" />
+
+                        <!--                        Icon valorant-->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/valorant" />
+                    </RadioGroup>
+
+                </GridLayout>
+
+            </HorizontalScrollView>
+
+            <!--            Grup layout sumber turnamen-->
+            <RelativeLayout
+                android:id="@+id/checkbox_sosmed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontal_scroll"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp">
+
+                <!--                Label sumber-->
+                <TextView
+                    android:id="@+id/lbl_cbx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="Sumber Turnamen ?"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <!--                Sumber instagram-->
+                <CheckBox
+                    android:id="@+id/instagram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl_cbx"
+                    android:checked="false"
+                    android:fontFamily="monospace"
+                    android:text="Instagram"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!--                Sumber discord-->
+                <CheckBox
+                    android:id="@+id/discord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/instagram"
+                    android:checked="false"
+                    android:fontFamily="monospace"
+                    android:text="Discord"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!--                Sumber Youtube-->
+                <CheckBox
+                    android:id="@+id/twitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/discord"
+                    android:checked="false"
+                    android:fontFamily="monospace"
+                    android:text="Twitch"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!--                Sumber youtube-->
+                <CheckBox
+                    android:id="@+id/youtube"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/twitch"
+                    android:checked="false"
+                    android:fontFamily="monospace"
+                    android:text="Youtube"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!--                Sumber nimotv-->
+                <CheckBox
+                    android:id="@+id/nimotv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/youtube"
+                    android:checked="false"
+                    android:fontFamily="monospace"
+                    android:text="NimoTV"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!--                Sumber lainnya-->
+                <CheckBox
+                    android:id="@+id/lainnya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nimotv"
+                    android:checked="false"
+                    android:fontFamily="monospace"
+                    android:text="Lainnya"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <!--            Grup layout seekbar-->
+            <RelativeLayout
+                android:id="@+id/grp_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkbox_sosmed"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="25dp">
+
+                <!--                Label rating-->
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="monospace"
+                    android:text="Beri nilai tim kami : "
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <!--                Seekbar rating-->
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rating"
+                    android:layout_marginHorizontal="65dp"
+                    android:layout_marginBottom="15dp"
+                    android:max="10"
+                    android:progress="5"
+                    android:scaleX="2"
+                    android:scaleY="2" />
+            </RelativeLayout>
+
+            <!--            Button submit-->
+            <Button
+                android:id="@+id/daftar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/grp_seekbar"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_button"
+                android:text="Daftar"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:theme="@style/btn_blue" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
